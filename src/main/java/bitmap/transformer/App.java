@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class App {
     public String getGreeting() {
-        return "Hello world.";
+        return "Hello world, welcome to bitmap.";
     }
 
     public static void main(String[] args) {
@@ -18,15 +18,10 @@ public class App {
         System.out.println(new App().getGreeting());
 
         Bitmap test = new Bitmap("src/assets/mario.bmp", "src/assets/", "test.bmp");
-
-        BufferedImage testImg = null;
-        try {
-            testImg = ImageIO.read(new File("src/assets/mario.bmp"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Bitmap testBlue = new Bitmap("src/assets/mario.bmp", "src/assets/", "blue-mario.bmp");
 
         test.bitTransformBlackWhite();
+        testBlue.bitTransformBluify();
     }
 
 }
