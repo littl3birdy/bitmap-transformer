@@ -17,9 +17,9 @@ Building a bitmap transformer CLI
 ### Start time: 
 10:50am
 ### End time:
-
+1:37pm
 ### Actual time to complete:
-
+2 hours (-47 minute lunch)
 
 ## Feature:Command 
 ### Estimated time:
@@ -39,4 +39,11 @@ Building a bitmap transformer CLI
 ### End time:
 
 ### Actual time to complete:
+
+
+----------------------------------------------------------------------------------------------------
+To test this code, create three Bitmap instances, using the same inputPath, but utilizing different outputPath(s) and newName(s). This will allow you to see the bitmap saved based on different paths and with different names.
+
+Use another inputPath to test how the transform method works on a different bmp image.
+
 
