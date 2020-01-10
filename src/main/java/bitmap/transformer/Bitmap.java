@@ -60,13 +60,14 @@ public class Bitmap {
         try {
             BufferedImage bitOG = ImageIO.read(this.bitFile);
 
-            //We used this resource for this code block: https://www.tutorialspoint.com/java_dip/grayscale_conversion.htm
+            //Assisted by Nicholas Carignan (he showed us how to write this code)
             for(int i=0; i <bitOG.getHeight(); i++) {
                 for(int j=0; j<bitOG.getWidth(); j++){
                     Color bitColor = new Color(bitOG.getRGB(i,j));
-
-                    int blue = (int)(bitColor.getBlue()*0.114);
-                    Color newBitColor = new Color(0, 0, blue);
+                    int r = (int)(bitColor.getRed()*0.193);
+                    int g = (int)(bitColor.getGreen()*0.193);
+                    int blue = (int)(bitColor.getBlue()*0.614);
+                    Color newBitColor = new Color(r, g, blue);
 
                     bitOG.setRGB(i,j,newBitColor.getRGB());
                 }
@@ -77,5 +78,6 @@ public class Bitmap {
             e.printStackTrace();
         }
     }
+
 
 }
