@@ -33,11 +33,12 @@ public class Bitmap {
 
     public Bitmap bitTransformBlackWhite () {
 
-        BufferedImage bitOG = null;
         try {
 
-            bitOG = ImageIO.read(this.bitFile);
-            BufferedImage bitMono = new BufferedImage(bitOG.getWidth(), bitOG.getHeight(), BufferedImage.TYPE_BYTE_BINARY);
+            BufferedImage bitOG = ImageIO.read(this.bitFile);
+//            BufferedImage bitMono = new BufferedImage(bitOG.getWidth(), bitOG.getHeight(), BufferedImage.TYPE_BYTE_BINARY);
+
+            this.bitOutputFile(bitOG);
 
         } catch (IOException e) {
             e.printStackTrace();

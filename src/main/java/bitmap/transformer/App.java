@@ -25,7 +25,8 @@ public class App {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        test.bitOutputFile(testImg);
+
+        test.bitTransformBlackWhite();
     }
 
 }
