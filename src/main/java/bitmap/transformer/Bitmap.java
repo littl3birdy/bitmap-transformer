@@ -10,7 +10,7 @@ public class Bitmap {
     }
 
     //instance methods
-    public static Bitmap bitTransformOne () {
+    public static Bitmap bitTransformBlackWhite () {
 
         return null;
     }
