@@ -34,9 +34,8 @@ public class Bitmap {
     public Bitmap bitTransformBlackWhite () {
 
         try {
-
             BufferedImage bitOG = ImageIO.read(this.bitFile);
-//            BufferedImage bitMono = new BufferedImage(bitOG.getWidth(), bitOG.getHeight(), BufferedImage.TYPE_BYTE_BINARY);
+//            BufferedImage bitMono = bitOG.setRGB(0, 0, 10);
 
             this.bitOutputFile(bitOG);
 
