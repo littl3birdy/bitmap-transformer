@@ -9,6 +9,12 @@ public class App {
     }
 
     public static void main(String[] args) {
+
         System.out.println(new App().getGreeting());
+
+        Bitmap test = new Bitmap("src/assets/mario.bmp", "src/assets/", "test.bmp");
+
+        test.bitTransformBlackWhite();
     }
+
 }
