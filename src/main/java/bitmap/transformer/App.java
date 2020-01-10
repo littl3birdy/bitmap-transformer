@@ -3,6 +3,11 @@
  */
 package bitmap.transformer;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
 public class App {
     public String getGreeting() {
         return "Hello world.";
@@ -14,7 +19,13 @@ public class App {
 
         Bitmap test = new Bitmap("src/assets/mario.bmp", "src/assets/", "test.bmp");
 
-        test.bitTransformBlackWhite();
+        BufferedImage testImg = null;
+        try {
+            testImg = ImageIO.read(new File("src/assets/mario.bmp"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        test.bitOutputFile(testImg);
     }
 
 }

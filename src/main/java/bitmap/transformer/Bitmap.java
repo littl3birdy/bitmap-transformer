@@ -20,10 +20,10 @@ public class Bitmap {
     }
 
     //instance methods
-    public void bitOutputFile (BufferedImage bit, String bitPath) {
+    public void bitOutputFile (BufferedImage bit) {
         try {
 
-            ImageIO.write(bit, "bmp", new File(bitPath));
+            ImageIO.write(bit, "bmp", this.newBitFile);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -33,8 +33,15 @@ public class Bitmap {
 
     public Bitmap bitTransformBlackWhite () {
 
-        BufferedImage bitOG = ImageIO.read(this.bitFile);
-        BufferedImage bitMono = new BufferedImage(bitOG.getWidth(), bitOG.getHeight(), BufferedImage.TYPE_BYTE_BINARY);
+        BufferedImage bitOG = null;
+        try {
+
+            bitOG = ImageIO.read(this.bitFile);
+            BufferedImage bitMono = new BufferedImage(bitOG.getWidth(), bitOG.getHeight(), BufferedImage.TYPE_BYTE_BINARY);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return null;
     }
