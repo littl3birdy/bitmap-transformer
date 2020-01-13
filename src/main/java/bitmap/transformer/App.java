@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class App {
     public String getGreeting() {
-        return "Hello world.";
+        return "Hello world.Welcome to bitmap-transformer.";
     }
 
     public static void main(String[] args) {
@@ -19,12 +19,12 @@ public class App {
 
         Bitmap test = new Bitmap("src/assets/mario.bmp", "src/assets/", "test.bmp");
 
-        BufferedImage testImg = null;
-        try {
-            testImg = ImageIO.read(new File("src/assets/mario.bmp"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        BufferedImage testImg = null;
+//        try {
+//            testImg = ImageIO.read(new File("src/assets/mario.bmp"));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         test.bitTransformBlackWhite();
     }

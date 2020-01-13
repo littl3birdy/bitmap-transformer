@@ -58,7 +58,26 @@ public class Bitmap {
         return null;
     }
 
-    public Bitmap bitTransformThree () {
+    public Bitmap bitTransformBluify() {
+        try {
+            BufferedImage bitOG = ImageIO.read(this.bitFile);
+//            BufferedImage bitMono = bitOG.setRGB(0, 0, 10);
+            //We used this resource for this code block: https://www.tutorialspoint.com/java_dip/grayscale_conversion.htm
+            for(int i=0; i <bitOG.getHeight(); i++) {
+                for(int j=0; j<bitOG.getWidth(); j++){
+                    Color bitColor = new Color(bitOG.getRGB(i,j));
+
+                    int blue = (int)(bitColor.getBlue());
+                    Color newBitColor = new Color(r+b+g,r+b+g,r+b+g);
+
+                    bitOG.setRGB(i,j,newBitColor.getRGB());
+                }
+            }
+            this.bitOutputFile(bitOG);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return null;
     }
