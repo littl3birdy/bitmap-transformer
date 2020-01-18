@@ -79,5 +79,23 @@ public class Bitmap {
         }
     }
 
+    public void bitTransformMirror () {
+        try {
+            BufferedImage bitOG = ImageIO.read(this.bitFile);
+
+            for(int i=0; i <bitOG.getHeight(); i++) {
+                for(int j=bitOG.getWidth() - 1; j > bitOG.getWidth() / 2; j--){
+                    Color bitColor = new Color(bitOG.getRGB(i,j));
+
+                    bitOG.setRGB(i,bitOG.getWidth() - 1 - j,bitColor.getRGB());
+                }
+            }
+            this.bitOutputFile(bitOG);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }

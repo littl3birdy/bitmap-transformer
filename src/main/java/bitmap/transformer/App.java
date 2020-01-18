@@ -19,9 +19,11 @@ public class App {
 
         Bitmap test = new Bitmap("src/assets/mario.bmp", "src/assets/", "test.bmp");
         Bitmap testBlue = new Bitmap("src/assets/mario.bmp", "src/assets/", "blue-mario.bmp");
+        Bitmap testMirror = new Bitmap("src/assets/mario.bmp", "src/assets", "mirror-mario.bmp");
 
         test.bitTransformBlackWhite();
         testBlue.bitTransformBluify();
+        testMirror.bitTransformMirror();
     }
 
 }
