@@ -1,6 +1,8 @@
 # bitmap-transformer
 Building a bitmap transformer CLI
 
+This was a 1 day lab challenge at the beginning of our Java training in Code Fellows. We had about 3 hours to figure out how to transform a bitmap file in 3 different ways, using our very beginner java skills. 
+
 ## Feature: Create new bitmap instance
 ### Estimated time:
 30 minutes
